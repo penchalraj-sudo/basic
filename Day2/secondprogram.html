@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Product List</h1>
+    <button onclick="fetchProducts()">Fetch Products</button>
+    <script>
+        var productsData = [
+            {
+                "name": "laptop",
+                "price": 999.90
+            }, {
+                "name": "mobile",
+                "price": 889.90
+            }, {
+                "name": "tv",
+                "price": 344.90
+            }
+        ];
+
+        function fetchProducts() {
+            setTimeout(function() {
+                var data = productsData;
+                var list = document.createElement("ul");
+                data.forEach(function(product) {
+                    var listItem = document.createElement("li");
+                    listItem.textContent = ${product.name} - $${product.price.toFixed(2)};
+                    list.appendChild(listItem);
+                });
+                document.body.appendChild(list);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Product List</h1>
+    <button onclick="fetchProducts()">Fetch Products</button>
+    <script>
+        var productsData = [
+            {
+                "name": "laptop",
+                "price": 999.90
+            }, {
+                "name": "mobile",
+                "price": 889.90
+            }, {
+                "name": "tv",
+                "price": 344.90
+            }
+        ];
+
+        function fetchProducts() {
+            setTimeout(function() {
+                var data = productsData;
+                var list = document.createElement("ul");
+                data.forEach(function(product) {
+                    var listItem = document.createElement("li");
+                    listItem.textContent = ${product.name} - $${product.price.toFixed(2)};
+                    list.appendChild(listItem);
+                });
+                document.body.appendChild(list);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
